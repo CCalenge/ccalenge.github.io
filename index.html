@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>portfoliodesktop</title>
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width"/>
+
+</head>
+
+<body >
+
+    <div id="haut">
+        <img src="images/bande_tissu_haut.png" alt="bande de tissu blanc"/>
+    </div>
+
+    <div class="conteneur">
+        <div id="portrait">
+            <img id="image" src="images/desk_logo_grand_blanc.png" alt="portrait blanc avec écharpe">
+        </div>
+
+        <nav>
+            <ul >
+                <li  onclick="myfunction()"><button id="show" alt="réalisations">réalisations</button></li>
+                <li  onclick="myfunction()"><button class="hide" alt="Parcours">Parcours</button></li>
+                <li  onclick="myfunction()"><button class="hide" alt="Contact">Contact</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- carousel -->
+
+    <div id="carrousel">
+        <ul>
+            <li><img url="images/m1.jpg" /></li>
+            <li><img src="images/m2.jpg" /></li>
+            <li><img src="images/m3.jpg" /></li>
+            <li><img src="images/m4.jpg" /></li>
+            <li><img src="images/m5.jpg" /></li>
+        </ul>
+    </div>
+
+
+<!-- parcours professionnel -->
+
+    <div id="parcours">
+            <p>Correspondante locale de presse à Ouest-France, Saint-Lô&#8239;: interviews et photographies de personnalités du monde culturel et associatif, rédaction d’articles de presse quotidienne.<br></br>Assistante de direction et d'éducation : animation d'ateliers de lecture et d'informatique auprès d'élèves de primaire, mise en page et création de documents pédagogiques, informatisation du fonds bibliographique, rédaction de courrier,
+            accueil téléphonique...<br></br>Agent commercial&#8239;: vente de produits du terroir normands, anglais et exotiques en GMS, suivi de clientèle, rédaction de mailing, implantation et réassort de linéaires,relevés de prix.facturation, relance de factures, publipostage, gestion de stocks.<br></br>Agent de valorisation du patrimoine culturel au centre culturel de Cerisy-la-Salle&#8239;: accueil, guide, inventaire et informatisation du fonds bibliographique, organisation d’expositions de livres, aide à l’organisation de colloques…</p>
+    </div>
+
+
+  <!-- formulaire de contact -->
+
+  <div>
+    <form action="/ma-page-de-traitement" method="post">
+
+      <div>
+        <label for="nom">Nom&#8239;:</label>
+        <input type="text" id="nom" name="user_name"/>
+      </div>
+
+      <div>
+        <label for="courriel">Courriel&#8239;:</label>
+        <input type="email" id="courriel" name="user_email"/>
+      </div>
+
+      <div>
+        <label for="message">Message&#8239;:</label>
+        <textarea name="" id="message" name="user_message"></textarea>
+      </div>
+
+      <div class="button">
+        <button type="submit">Envoyer votre message</button>
+      </div>
+
+    </form>
+  </div>
+
+
+
+<!-- pied de page -->
+
+  <footer>
+      <div id="mentions">
+        <a href="#" alt="mentions légales">mentions légales</a>
+      </div>
+      <div id="liensSociaux">
+        <a href="#" alt="lien facebook"> <img src="icones/facebookbleu32.svg"/></a>
+        <a href="#" alt="lien linkedin"><img src="icones/linkedinbleu32.svg"/></a>
+        <a href="#" alt="lien twitter"><img  src="icones/twitterbleu32.svg"/></a>
+      </div>
+  </footer>
+
+    <!-- script pour l'animation du portrait qui va du centre au côté gauche
+    en rétrecissant lorsque l'on clique sur Réalisations, Parcours ou Contact -->
+
+  <script>
+  function myfunction() {
+      document.getElementById("image").classList.add("animation");
+  }
+  </script>
+
+
+  <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="js/anim.js"></script>
+
+
+<!-- script pour rendre invisibles le carrousel, le texte du Parcours
+et le formulaire de contact avant qu'ils ne soient appelés -->
+<script>
+function masqueToutSaufmonId(id){
+    var lesDivs = document.getElementsByClassName('Divs');
+    Array.prototype.map.call(lesDivs, function(el) {
+        if (el.id != id){
+            el.style.visibility = "hidden";
+        }
+    });
+}
+</script>
+
+<!-- script pour faire apparaitre et disparaitre le carrousel en cliquant sur Parcours et contact -->
+  <script>
+  $(document).ready(function(){
+      $(".hide").click(function(){
+          $("#carrousel").hide();
+      });
+      $("#show").click(function(){
+          $("#carrousel").show();
+      });
+  });
+  </script>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,280 @@
+html{
+  weight: 100%;
+  padding: 0;
+  font-size:100%:
+}
+
+body{
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background:url("images/desk_echantillon_fond_toile.jpg");
+
+}
+/*bande du haut*/
+#haut img {
+  height: 10%;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+/*bande du bas*/
+#bas img{
+  position: absolute;
+  bottom: -2rem;
+}
+
+/*Animation du portrait : centré en accueil,
+en haut à gauche lorsqu'on clique Réalisations, Parcours et Contact.*/
+
+#portrait img {
+  position:absolute;
+  align-content: center;
+  max-width:60%;
+  left:10%;
+  }
+
+.animation {
+    animation: deplacement 2s;
+    animation-fill-mode: forwards;
+  }
+
+
+/*navigation en haut à droite*/
+/*la nav se place sous le portrait quand la largeur est réduite */
+.conteneur{
+  display: flex;
+}
+#portrait:nth-child(1){
+    order: 1;
+}
+
+nav:nth-child(2){
+  position:relative;;
+  float: right;
+  padding-top: 60 %;
+  margin-left: 40%;
+  order:2;
+}
+
+nav li{
+  display: inline;
+  /*list-style-type: none;*/
+  }
+
+
+nav ul li button{
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Garamond, serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+nav ul li button:hover{
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bolder;
+}
+nav ul li button:focus {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bolder;
+}
+
+nav ul li button:visited {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bolder;
+}
+
+/*carousel*/
+#carrousel{
+    position:relative;
+    height:200px;
+    width:700px;
+    margin:auto;
+
+}
+
+#carrousel ul li{
+    position:absolute;
+    top:0;
+    left:0;
+
+}
+
+/*texte du parcours professionnel */
+#parcours {
+  margin-top: 20%;
+  position: relative;
+  width: 70%;
+  height: 40%;
+  margin: 0 auto;
+  background-image: url("images/fondblancefface.png");
+  background-size: cover;
+  font: garamond;
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 2rem;
+  overflow-y: scroll;
+
+}
+
+/*Formulaire de contact */
+
+form {
+  position: relative;
+  background-image: url("images/fondblancefface.png");
+  background-size: cover;
+  /* pour placer dans la page  */
+  margin: 0 auto;
+  width: 70%;
+  /*pour voir les limites du formulaire*/
+  padding: 1em;
+
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /*étiquettes aux mêmes dimensions et alignées */
+  position: relative;
+  display:inline-block;
+  width: 30%;
+  text-align: left;
+  font: garamond;
+  font-weight: bolder;
+  color: #058674;
+}
+
+input, textarea {
+  font: garamond, serif;
+  /* Pour donner la même dimension à tous les champs textuels */
+  width: 97%;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+  /*Pour harmoniser l'apparence des bordures des champs textuels */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* Afin de rehausser les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /*Pour aligner les champs multilignes et leurs étiquettes */
+  vertical-align: top;
+  /*Pour donner assez d'espace pour entrer le texte */
+  height: 5em;
+  /* Pour permettre aux utilisateurs de redimensionner un champs textuel horizontalement */
+  resize: vertical;
+}
+
+.button {
+  /* Pour positionner les boutons de la même manière que les champs textuels */
+  padding-left: 0; /*même dimension que les étiquettes */
+}
+
+button {
+  /* Cette marge représente approximativement le même espace que celui entre les étiquettes
+  et les champs textuels */
+  margin-left: 0;
+  font: garamond;
+  font-weight: bold;
+  color:#058674;
+}
+
+
+
+
+footer {
+  position: fixed;
+  display:flex;
+  height: 4.5em;
+  bottom: 0;
+  left: 0; right: 0;
+  background: url(images/bande_tissu_bas.png) no-repeat;
+  background-position: bottom;
+  }
+
+#mentions a{
+  position:fixed;
+  padding-left: 10%;
+  padding-top: 4%;
+  text-decoration: none;
+  font-size: 1rem;
+  color:#058074;
+}
+
+#liensSociaux {
+  position:fixed;
+  padding-left: 45%;
+  padding-top: 3%;
+}
+
+#liensociaux a img{
+  padding-left:9px;
+}
+
+@media (min-width: 320px) {
+  body {
+    font-size:1rem;
+  }
+
+
+@media (max-width: 320px) {
+  body {
+    font-size:1rem;
+  }
+}
+@media (min-width: 640px) {
+  body {
+    font-size:1rem;
+  }
+}
+@media (min-width:960px) {
+  body {
+    font-size:1rem;
+  }
+}
+@media (min-width:1100px)
+
+{
+  body {
+    font-size:1rem;
+  }
+}
+@media screen and (max-width: 1024px)
+    {
+      #portrait img {
+        position:absolute;
+        align-content: center;
+        max-width:80%;
+      }
+      nav {
+      position: flex;
+          }
+        }
+
+
+/* code pour l'animation du portrait en accueil*/
+@keyframes deplacement{
+  0% {width: 60%;}
+  100%{width: 20%;}
+}
+.item{
+  margin-left: 26%;
+}
