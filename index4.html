@@ -13,12 +13,12 @@
 <body >
 
     <div id="haut">
-      <img src="images/bande_tissu_haut.png" alt="bande de tissu blanc"/>
+        <img src="images/bande_tissu_haut.png" alt="bande de tissu blanc"/>
     </div>
 
     <div>
-        <div id="portrait">
-          <img src="images/desk_logo_grand_blanc.png" alt="portrait blanc avec écharpe"/>
+        <div>
+          <a href="index.html"><img id="image" src="images/desk_logo_grand_blanc.png" alt="portrait blanc avec écharpe"/></a>        </div>
         </div>
 
         <nav>
@@ -29,6 +29,33 @@
             </ul>
         </nav>
     </div>
+
+  <!-- formulaire de contact -->
+
+  <div>
+    <form action="/ma-page-de-traitement" method="post">
+
+      <div>
+        <label for="nom">Nom&#8239;:</label>
+        <input type="text" id="nom" name="user_name"/>
+      </div>
+
+      <div>
+        <label for="courriel">Courriel&#8239;:</label>
+        <input type="email" id="courriel" name="user_email"/>
+      </div>
+
+      <div>
+        <label for="message">Message&#8239;:</label>
+        <textarea name="" id="message" name="user_message"></textarea>
+      </div>
+
+      <div class="button">
+        <button type="submit">Envoyer votre message</button>
+      </div>
+
+    </form>
+  </div>
 
 
 <!-- pied de page -->
@@ -43,7 +70,6 @@
         <a href="#" alt="lien twitter"><img  src="icones/twitterbleu32.svg"/></a>
       </div>
   </footer>
-
 
 
 </body>

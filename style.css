@@ -14,9 +14,10 @@ body{
 }
 /*bande du haut*/
 #haut img {
-  height: 10%;
+  position: absolute;
+  padding-left: -5px;
   margin-left: -10px;
-  margin-top: -20px;
+  margin-top: -15px;
 }
 /*bande du bas*/
 #bas img{
@@ -24,74 +25,55 @@ body{
   bottom: -2rem;
 }
 
-/*Animation du portrait : centré en accueil,
-en haut à gauche lorsqu'on clique Réalisations, Parcours et Contact.*/
+/*Positionnements du portrait*/
+#portrait {
+    position: absolute;
+    padding-top: 10%;
+}
 
-#portrait img {
-  position:absolute;
+#portrait img{
+
   align-content: center;
-  max-width:60%;
-  left:10%;
-  }
-
-.animation {
-    animation: deplacement 2s;
-    animation-fill-mode: forwards;
-  }
+  padding-left:10%;
+  max-width: 75%;
+}
 
 
 /*navigation en haut à droite*/
 /*la nav se place sous le portrait quand la largeur est réduite */
-.conteneur{
-  display: flex;
-}
-#portrait:nth-child(1){
-    order: 1;
-}
 
-nav:nth-child(2){
-  position:relative;;
+
+nav {
+  position:relative;
   float: right;
-  padding-top: 60 %;
-  margin-left: 40%;
-  order:2;
+  padding-right: 10%;
+  padding-top: 10%;
 }
 
 nav li{
   display: inline;
-  /*list-style-type: none;*/
+  list-style-type: none;
   }
 
-
-nav ul li button{
-  border: 0;
-  background-color: transparent;
-  padding: 0;
+nav ul li a{
   color: rgba(255, 255, 255, 0.8);
   font-family: Garamond, serif;
+  padding-right: 1.5rem;
   font-size: 2.5rem;
   font-weight: bold;
+  text-decoration: none;
 }
 
-nav ul li button:hover{
-  border: 0;
-  background-color: transparent;
-  padding: 0;
+nav ul li a:hover{
   color: rgba(255, 255, 255, 1);
   font-weight: bolder;
 }
-nav ul li button:focus {
-  border: 0;
-  background-color: transparent;
-  padding: 0;
+nav ul li a:focus {
   color: rgba(255, 255, 255, 1);
   font-weight: bolder;
 }
 
-nav ul li button:visited {
-  border: 0;
-  background-color: transparent;
-  padding: 0;
+nav ul li a:visited {
   color: rgba(255, 255, 255, 0.1);
   font-weight: bolder;
 }
@@ -109,7 +91,6 @@ nav ul li button:visited {
     position:absolute;
     top:0;
     left:0;
-
 }
 
 /*texte du parcours professionnel */
@@ -127,7 +108,6 @@ nav ul li button:visited {
   line-height: 1.5;
   padding: 2rem;
   overflow-y: scroll;
-
 }
 
 /*Formulaire de contact */
@@ -141,7 +121,6 @@ form {
   width: 70%;
   /*pour voir les limites du formulaire*/
   padding: 1em;
-
 }
 
 form div + div {
@@ -197,9 +176,6 @@ button {
   color:#058674;
 }
 
-
-
-
 footer {
   position: fixed;
   display:flex;
@@ -229,52 +205,43 @@ footer {
   padding-left:9px;
 }
 
-@media (min-width: 320px) {
+
+/* adaptation aux différents formats d'écran */
+
+@media (max-width:640){
   body {
-    font-size:1rem;
+    font-size: 1rem;
+}
+  #portrait img {
+    align-content: center;
+
+    }
   }
 
-
-@media (max-width: 320px) {
-  body {
-    font-size:1rem;
-  }
-}
-@media (min-width: 640px) {
-  body {
-    font-size:1rem;
-  }
-}
-@media (min-width:960px) {
-  body {
-    font-size:1rem;
-  }
-}
-@media (min-width:1100px)
-
-{
-  body {
-    font-size:1rem;
-  }
-}
-@media screen and (max-width: 1024px)
-    {
-      #portrait img {
-        position:absolute;
-        align-content: center;
-        max-width:80%;
-      }
-      nav {
-      position: flex;
-          }
-        }
+/*navigation en haut à droite*/
+/*la nav se place sous le portrait quand la largeur est réduite */
 
 
-/* code pour l'animation du portrait en accueil*/
-@keyframes deplacement{
-  0% {width: 60%;}
-  100%{width: 20%;}
+nav {
+  position:relative;
+  padding-right: 10%;
+  padding-top: 10%;
 }
-.item{
-  margin-left: 26%;
+
+
+
+@media (min-width:640)
+  body{
+    font-size: 1rem;
+}
+
+
+@media (min-width:960)
+  body{
+    font-size: 1rem;
+}
+
+@media (max-width:1100)
+  body{
+    font-size: 1rem;
 }
