@@ -18,6 +18,7 @@ body{
   padding-left: -5px;
   margin-left: -10px;
   margin-top: -15px;
+
 }
 /*bande du bas*/
 #bas img{
@@ -25,16 +26,16 @@ body{
   bottom: -2rem;
 }
 
+
 /*Positionnements du portrait*/
 #portrait {
     position: absolute;
-    padding-top: 10%;
+    padding-top: 15px;
+    padding-left: 10%;
 }
 
-#portrait img{
-
+#portrait img {
   align-content: center;
-  padding-left:10%;
   max-width: 75%;
 }
 
@@ -45,9 +46,7 @@ body{
 
 nav {
   position:relative;
-  float: right;
-  padding-right: 10%;
-  padding-top: 10%;
+  margin-left: 35%;
 }
 
 nav li{
@@ -183,50 +182,127 @@ footer {
   bottom: 0;
   left: 0; right: 0;
   background: url(images/bande_tissu_bas.png) no-repeat;
+  background-size: cover;
   background-position: bottom;
   }
 
 #mentions a{
   position:fixed;
   padding-left: 10%;
-  padding-top: 4%;
+  padding-top: 2%;
   text-decoration: none;
   font-size: 1rem;
   color:#058074;
 }
 
-#liensSociaux {
+#lienssociaux {
   position:fixed;
   padding-left: 45%;
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
-#liensociaux a img{
-  padding-left:9px;
+#lienssociaux a{
+  padding-left:25px;
 }
 
+
+/*Index2, page Réalisation*/
+
+.conteneur {
+  display: flex;
+}
+
+#logo {
+  position: absolute;
+  width: 30%;
+  padding-left: 3rem;
+  padding-top: 3rem;
+}
+
+.nav2 {
+ position: absolute;
+ margin-right: 2rem;
+}
+
+
+
+/*index3, page Parcours */
+
+/*index4, page Contact */
+
+/*index5, page mentions légales */
 
 /* adaptation aux différents formats d'écran */
 
 @media (max-width:640){
-  body {
-    font-size: 1rem;
-}
-  #portrait img {
-    align-content: center;
 
-    }
-  }
 
 /*navigation en haut à droite*/
 /*la nav se place sous le portrait quand la largeur est réduite */
 
 
 nav {
-  position:relative;
+  position:absolute;
   padding-right: 10%;
-  padding-top: 10%;
+  padding-top: 5%;
 }
+
+
+@media screen and (min-width: 200px) and (max-width: 640px){
+
+
+  /*Positionnements du portrait*/
+  #portrait {
+      padding-top: 30px;
+      padding-left: 10%;
+  }
+
+  #portrait img {
+    max-width: 75%;
+  }
+
+nav ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Garamond,serif;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  display:flex;
+  height: 4.5em;
+  bottom: 0;
+  left: 0; right: 0;
+  background: url(images/bande_tissu_bas.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  }
+
+#mentions a{
+  position:fixed;
+  padding-left: 2%;
+  padding-top: 11%;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color:#058074;
+}
+
+#lienssociaux {
+  position:fixed;
+  padding-left: 55%;
+  padding-top: 8%;
+}
+
+#lienssociaux a{
+  padding-left:5px;
+}
+
+}
+
 
 
 
